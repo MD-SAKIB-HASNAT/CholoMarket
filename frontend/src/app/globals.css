@@ -1,0 +1,200 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-rubik), var(--font-bangla), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, monospace;
+  --font-heading: var(--font-rubik), var(--font-bangla), ui-sans-serif, system-ui, sans-serif;
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-deal: var(--deal);
+  --color-bargain: var(--bargain);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+/*
+ * Retail palette: maroon for the brand and primary actions (the red of a jamdani border
+ * or a Boishakh banner), marigold for bargain tags, vermilion for price drops,
+ * warm cream surfaces and a warm charcoal for dark bands. Flat surfaces, small radii.
+ * Green is used only for success states (in stock, paid, delivered).
+ */
+:root {
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.22 0.012 40);
+  --ink: oklch(0.25 0.025 35);
+  --surface: oklch(0.968 0.012 75);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.22 0.012 40);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.22 0.012 40);
+  --primary: oklch(0.42 0.14 18);
+  --primary-foreground: oklch(0.99 0 0);
+  --secondary: oklch(0.955 0.01 60);
+  --secondary-foreground: oklch(0.28 0.025 35);
+  --muted: oklch(0.962 0.007 60);
+  --muted-foreground: oklch(0.5 0.015 45);
+  --accent: oklch(0.955 0.02 18);
+  --accent-foreground: oklch(0.36 0.12 18);
+  --destructive: oklch(0.55 0.2 27);
+  --deal: oklch(0.6 0.2 35);
+  --bargain: oklch(0.76 0.15 70);
+  --success: oklch(0.5 0.12 155);
+  --warning: oklch(0.7 0.14 70);
+  --border: oklch(0.905 0.01 60);
+  --input: oklch(0.88 0.012 60);
+  --ring: oklch(0.52 0.13 18);
+  --chart-1: oklch(0.45 0.14 18);
+  --chart-2: oklch(0.74 0.15 70);
+  --chart-3: oklch(0.55 0.1 245);
+  --chart-4: oklch(0.6 0.09 190);
+  --chart-5: oklch(0.6 0.08 300);
+  --radius: 0.4rem;
+  --sidebar: oklch(0.982 0.006 70);
+  --sidebar-foreground: oklch(0.22 0.012 40);
+  --sidebar-primary: oklch(0.42 0.14 18);
+  --sidebar-primary-foreground: oklch(0.99 0 0);
+  --sidebar-accent: oklch(0.945 0.025 18);
+  --sidebar-accent-foreground: oklch(0.34 0.12 18);
+  --sidebar-border: oklch(0.905 0.01 60);
+  --sidebar-ring: oklch(0.52 0.13 18);
+}
+
+.dark {
+  --background: oklch(0.17 0.008 40);
+  --foreground: oklch(0.95 0.006 60);
+  --ink: oklch(0.92 0.02 40);
+  --surface: oklch(0.2 0.008 40);
+  --card: oklch(0.21 0.008 40);
+  --card-foreground: oklch(0.95 0.006 60);
+  --popover: oklch(0.21 0.008 40);
+  --popover-foreground: oklch(0.95 0.006 60);
+  --primary: oklch(0.72 0.13 18);
+  --primary-foreground: oklch(0.18 0.03 18);
+  --secondary: oklch(0.26 0.008 40);
+  --secondary-foreground: oklch(0.95 0.006 60);
+  --muted: oklch(0.26 0.008 40);
+  --muted-foreground: oklch(0.7 0.012 50);
+  --accent: oklch(0.29 0.04 18);
+  --accent-foreground: oklch(0.92 0.03 18);
+  --destructive: oklch(0.68 0.18 25);
+  --deal: oklch(0.7 0.17 38);
+  --bargain: oklch(0.8 0.14 70);
+  --success: oklch(0.7 0.13 155);
+  --warning: oklch(0.8 0.13 70);
+  --border: oklch(1 0 0 / 11%);
+  --input: oklch(1 0 0 / 16%);
+  --ring: oklch(0.62 0.12 18);
+  --chart-1: oklch(0.72 0.13 18);
+  --chart-2: oklch(0.8 0.13 70);
+  --chart-3: oklch(0.7 0.1 245);
+  --chart-4: oklch(0.72 0.09 190);
+  --chart-5: oklch(0.72 0.08 300);
+  --sidebar: oklch(0.2 0.008 40);
+  --sidebar-foreground: oklch(0.95 0.006 60);
+  --sidebar-primary: oklch(0.72 0.13 18);
+  --sidebar-primary-foreground: oklch(0.18 0.03 18);
+  --sidebar-accent: oklch(0.28 0.03 18);
+  --sidebar-accent-foreground: oklch(0.95 0.006 60);
+  --sidebar-border: oklch(1 0 0 / 11%);
+  --sidebar-ring: oklch(0.62 0.12 18);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply font-sans;
+  }
+}
+
+@utility container-page {
+  width: 100%;
+  max-width: 82rem;
+  margin-inline: auto;
+  padding-inline: 1rem;
+  @media (width >= 40rem) {
+    padding-inline: 1.5rem;
+  }
+}
+
+/* Hide the scrollbar on horizontal chip rows while keeping them scrollable. */
+@utility scrollbar-none {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Map pins (Leaflet divIcons) */
+.map-pin,
+.map-pin-me {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--primary);
+  border: 2px solid #fff;
+  box-shadow: 0 2px 6px rgb(0 0 0 / 0.35);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+}
+.map-pin-me {
+  width: 18px;
+  height: 18px;
+  margin: 8px;
+  background: #2563eb;
+}
+.leaflet-container {
+  font: inherit;
+}
+.leaflet-popup-content a {
+  color: var(--primary);
+}

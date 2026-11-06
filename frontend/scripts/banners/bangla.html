@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<!--
+  Bangla home banner, drawn in a real browser so Bengali letters are shaped properly.
+  Rendered to public/banner-art/bn-wide.png and bn-phone.png by scripts/build-banners.mjs
+  (?size=wide → 2400×750, ?size=phone → 1200×800). Same layout as the English banner
+  (src/app/banners/[name]/route.tsx): four numbered photos in a row. Photo credits: photos/CREDITS.md
+-->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@500;600;700;800&display=block">
+<style>
+  :root { --maroon:#891f2f; --marigold:#ed9e2f; --cream:#f9f3ec; --ink:#2c1d19; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  html, body { width:100%; height:100%; overflow:hidden; }
+  body { font-family:'Anek Bangla','Nirmala UI',sans-serif; color:var(--ink); background:var(--cream); }
+  .banner { display:flex; width:100%; height:100%; }
+
+  .brand { display:flex; align-items:flex-end; gap:14px; color:#fff; font-weight:700; line-height:1; }
+  .brand svg { height:62px; width:auto; }
+  .brand span { font-size:46px; letter-spacing:-.5px; }
+
+  .msg { background:var(--maroon); color:#fff; display:flex; flex-direction:column; }
+  h1 { font-weight:800; line-height:1.28; letter-spacing:-.5px; }
+  h1 em { font-style:normal; color:var(--marigold); display:block; }
+  .sub { color:#f3e3da; font-weight:500; }
+  .divisions { display:flex; flex-wrap:wrap; gap:10px; }
+  .divisions b { font-weight:600; padding:6px 20px; border-radius:999px; border:2px solid var(--marigold); color:#fff; }
+  .label { font-weight:600; color:#f3d9c4; margin-bottom:12px; }
+
+  /* journey: four portrait photos with arrows, as in the English banner */
+  .journey { display:flex; align-items:flex-start; justify-content:center; }
+  .step { display:flex; flex-direction:column; flex:none; }
+  .photo { position:relative; border-radius:16px; overflow:hidden; background:#e9dfd3 center/cover no-repeat; }
+  .photo .grid { position:absolute; inset:0; display:grid; grid-template-columns:1fr 1fr; grid-template-rows:1fr 1fr; gap:3px; background:#fff; }
+  .photo .grid i { background:#eee center/cover no-repeat; }
+  .num { position:absolute; top:14px; left:14px; display:grid; place-items:center; border-radius:50%; background:var(--maroon); color:#fff; font-weight:700; }
+  .num.last { background:var(--marigold); color:var(--ink); }
+  .step h3 { font-weight:700; line-height:1.15; }
+  .step p { color:#6b5a52; font-weight:500; line-height:1.3; }
+  .arrow { display:flex; align-items:center; color:var(--maroon); font-weight:700; }
+
+  /* ---------- wide: 2400×750 ---------- */
+  body.wide .msg { width:1010px; padding:62px 70px; justify-content:space-between; }
+  body.wide h1 { font-size:80px; white-space:nowrap; margin-top:8px; }
+  body.wide .sub { font-size:36px; line-height:1.4; text-wrap:balance; margin-top:6px; }
+  body.wide .divisions { flex-wrap:nowrap; gap:7px; }
+  body.wide .divisions b { font-size:21px; padding:4px 12px; border-width:1.5px; }
+  body.wide .label { font-size:25px; }
+  body.wide .art { flex:1; display:flex; align-items:center; justify-content:center; }
+  body.wide .step { width:270px; }
+  body.wide .photo { width:270px; height:420px; }
+  body.wide .num { width:46px; height:46px; font-size:28px; }
+  body.wide .step h3 { margin-top:16px; font-size:40px; }
+  body.wide .step p { margin-top:4px; font-size:25px; }
+  body.wide .arrow { height:420px; padding:0 14px; font-size:50px; }
+
+  /* ---------- phone: 1200×800 ---------- */
+  body.phone .banner { flex-direction:column; }
+  body.phone .msg { padding:42px 54px 36px; gap:14px; }
+  body.phone .brand svg { height:52px; }
+  body.phone .brand span { font-size:44px; }
+  body.phone h1 { font-size:84px; }
+  body.phone .sub { font-size:42px; line-height:1.3; }
+  body.phone .divisions, body.phone .label, body.phone .step p { display:none; }
+  body.phone .art { flex:1; display:flex; align-items:center; justify-content:center; padding-top:6px; }
+  body.phone .step { width:232px; }
+  body.phone .photo { width:232px; height:250px; border-radius:14px; }
+  body.phone .num { top:10px; left:10px; width:44px; height:44px; font-size:26px; }
+  body.phone .step h3 { margin-top:12px; font-size:46px; }
+  body.phone .arrow { height:250px; padding:0 4px; font-size:40px; }
+  body.wide .phone-only, body.phone .wide-only { display:none; }
+</style>
+</head>
+<body>
+<div class="banner">
+  <div class="msg">
+    <div class="brand">
+      <svg viewBox="0 0 40 36" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <g transform="rotate(-8 9 22)">
+          <path d="M6.6 17.2V15.8a2.6 2.6 0 0 1 5.2 0v1.4" stroke="#fff" stroke-width="1.4"/>
+          <rect x="3.6" y="17.2" width="11" height="10.6" rx="1.8" fill="#ed9e2f"/>
+        </g>
+        <path d="M22.6 10.4C17.4 10.2 13.4 12.2 10.6 16.8" stroke="#ed9e2f" stroke-width="1.6"/>
+        <g stroke="#fff">
+          <path d="M24.2 11.4 20.8 22" stroke-width="3.8"/>
+          <path d="M24 12.6 17.8 15.8 22.4 9.9" stroke-width="2.8"/>
+          <path d="M24.6 12.6 28.8 16.4 32 19.8" stroke-width="2.8"/>
+          <path d="M20.8 22 25.6 27.6 28.8 33.4" stroke-width="3.4"/>
+          <path d="M20.8 22 16.6 27.8 12.4 32.4" stroke-width="3.4"/>
+        </g>
+        <circle cx="25.8" cy="6.2" r="3.7" fill="#fff"/>
+      </svg>
+      <span>চলো মার্কেট</span>
+    </div>
+
+    <div>
+      <h1>সারা বাংলাদেশের মার্কেট<em>এখন আপনার হাতের মুঠোয়।</em></h1>
+      <p class="sub">
+        <span class="wide-only">ঘরে বসেই ঘুরে দেখুন, অর্ডার করুন —<br>ক্যাশ&nbsp;অন&nbsp;ডেলিভারিতে পৌঁছে যাবে আপনার দরজায়।</span>
+        <span class="phone-only">ঘরে বসেই অর্ডার করুন, ক্যাশ অন ডেলিভারিতে পান।</span>
+      </p>
+    </div>
+
+    <div>
+      <div class="label">ডেলিভারি আছে সব বিভাগেই</div>
+      <div class="divisions"><b>ঢাকা</b><b>চট্টগ্রাম</b><b>সিলেট</b><b>রাজশাহী</b><b>খুলনা</b><b>বরিশাল</b><b>রংপুর</b><b>ময়মনসিংহ</b></div>
+    </div>
+  </div>
+
+  <div class="art"><div class="journey" id="journey"></div></div>
+</div>
+
+<script>
+  const size = new URLSearchParams(location.search).get('size') === 'phone' ? 'phone' : 'wide';
+  document.body.className = size;
+  const U = (id, w) => `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${w}&q=80`;
+  const products = [
+    'photo-1560769629-975ec94e6a86', // sneakers
+    'photo-1606220588913-b3aacb4d2f46', // earbuds
+    'photo-1616406432452-07bc5938759d', // leather loafers
+    'photo-1646149757906-e6e9e9a7c77f', // attar
+  ];
+  const steps = [
+    { label: 'মার্কেট', text: 'পছন্দের মার্কেট বেছে নিন', css: `url(photos/zamzam-tower.jpg)`, pos: 'center 40%' },
+    { label: 'দোকান', text: 'নামি দোকানে ঢুকে দেখুন', css: `url(photos/aarong.jpg)`, pos: 'center 8%' },
+    { label: 'পণ্য', text: 'পছন্দের পণ্য অর্ডার করুন', grid: products },
+    { label: size === 'wide' ? 'ঘরের দরজায়' : 'দরজায়', text: 'ক্যাশে টাকা দিয়ে বুঝে নিন', css: `url(${U('photo-1566576721346-d4a3b4eaeb55', 700)})`, pos: 'center 60%' },
+  ];
+  const digits = ['১', '২', '৩', '৪'];
+  document.getElementById('journey').innerHTML = steps.map((s, i) => {
+    const inner = s.grid
+      ? `<div class="grid">${s.grid.map((id) => `<i style="background-image:url(${U(id, 420)})"></i>`).join('')}</div>`
+      : '';
+    const bg = s.grid ? '' : `background-image:${s.css};background-position:${s.pos};`;
+    const step = `<div class="step"><div class="photo" style="${bg}">${inner}<span class="num${i === 3 ? ' last' : ''}">${digits[i]}</span></div><h3>${s.label}</h3><p>${s.text}</p></div>`;
+    return (i ? '<div class="arrow">→</div>' : '') + step;
+  }).join('');
+</script>
+</body>
+</html>
